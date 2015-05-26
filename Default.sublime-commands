@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Show TeXdoc",
+        "command": "prompt_show_texdoc"
+    }
+]
