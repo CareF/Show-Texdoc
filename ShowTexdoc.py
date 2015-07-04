@@ -13,7 +13,7 @@ from .thread_progress import ThreadProgress
 # The location of chached package list
 # I have to use absolote path here
 # or sometimes loading will fail
-cachedir = os.path.join(sublime.packages_path(), "Show Texdoc", 'paclist.pcl')
+cachedir = os.path.join(sublime.packages_path(), "ShowTexdoc", 'paclist.pcl')
 
 class PromptShowTexdocCommand(sublime_plugin.WindowCommand):
     '''Recognize the packages used in the documents'''
@@ -60,7 +60,7 @@ class ShowAllTexdocCommand(sublime_plugin.WindowCommand):
                 with open(cachedir, 'rb') as pacs:
                     self.package_list = pickle.load(pacs)
             except Exception as e:
-                sublime.status_message("Load chache failed: "+e.strerror)
+                sublime.status_message("Load chache failed: "+e.strerror+cachedir)
                 return
             if self.window.active_view():
                 self.window.show_quick_panel(self.package_list, self.on_done)

@@ -29,7 +29,7 @@ installed in the local machine (acquired by `tlmgr list` command).
 * `Show TeXdoc with user input`: This will allow you to input a package name, 
 which is equivalent to the shell command `texdoc`.
 * `Show TeXdoc: refresh the list of installed packages`: Searching for all 
-packages installed is costy, so it is actually stored in `Packages\Show Texdoc\
+packages installed is costy, so it is actually stored in `Packages\ShowTexdoc\
 paclist.pcl` as pickle binary. And this command will refresh the chache.
 
 You need to run `Show TeXdoc: refresh the list of installed packages` at least 
