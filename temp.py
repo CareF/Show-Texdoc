@@ -1,21 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Filename: TexPackageRecognizer.py
+# Filename: temp.py
 # Author:   Lyu Ming <CareF.Lm@gmail.com>
 
-
-import re
-
-def GetPackagenameInline(TeXLine):
-    """This function use regular expression to recognize LaTeX userpackage name"""
-    packages = re.findall(r'\\usepackage(?:\[[^\]]*\])?\{([^}]*)\}',TeXLine)
-    if packages != None:
-        packlist = []
-        for packs in packages:
-            packlist += packs.split(',')
-        return packlist
-    else:
-        return None
+from tex_package_recognizer import GetPackagenameInline
 
 if __name__ == "__main__":
     Sample = '''%!TEX program = xelatex

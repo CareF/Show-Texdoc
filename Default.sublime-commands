@@ -1,6 +1,18 @@
 [
     {
-        "caption": "Show TeXdoc",
+        "caption": "Show TeXdoc mentioned in this document",
         "command": "prompt_show_texdoc"
+    },
+    {
+        "caption": "Show TeXdoc from all packages installed",
+        "command": "show_all_texdoc"
+    },
+    {
+        "caption": "Show TeXdoc with user input",
+        "command": "input_show_texdoc"
+    },
+    {
+        "caption": "Show TeXdoc: refresh the list of installed packages",
+        "command": "refresh_texdoc"
     }
 ]
