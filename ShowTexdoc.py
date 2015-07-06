@@ -13,6 +13,9 @@ from .thread_progress import ThreadProgress
 # The location of chached package list
 # I have to use absolote path here
 # or sometimes loading will fail
+pacpath = os.path.join(sublime.packages_path(), "ShowTexdoc")
+if not os.path.exists(pacpath):
+    os.makedirs(pacpath)
 cachedir = os.path.join(sublime.packages_path(), "ShowTexdoc", 'paclist.pcl')
 
 class PromptShowTexdocCommand(sublime_plugin.WindowCommand):

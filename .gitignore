@@ -9,5 +9,8 @@ Desktop.ini
 *.egg-info
 dist
 build
+# Package Control
+package-metadata.json
 # My configurations:
 temp.py
+paclist.pcl
