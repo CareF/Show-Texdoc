@@ -18,6 +18,11 @@ package require the following two commands about TeX:
 Any distribution that supported These two commands should be supported
 by this package. 
 
+## Version
+- v1.0.0: The first realse that realize basic function of showing docs.
+
+- v1.0.1: Bug fix. Creat path for cache file when loading the package.
+
 ## Usage
 Press `Ctrl+Shift+P` to call the panel, input `show texdoc` and choose 
 from the 4 items. 

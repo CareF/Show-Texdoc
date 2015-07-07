@@ -1,0 +1,2 @@
+Bug fix:
+	Creat path for cache file when loading the package.
