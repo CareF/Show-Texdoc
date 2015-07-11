@@ -19,9 +19,9 @@ Any distribution that supported These two commands should be supported
 by this package. 
 
 ## Version
-- v1.0.0: The first realse that realize basic function of showing docs.
+- v1.0.0: The first release that realize basic function of showing docs.
 
-- v1.0.1: Bug fix. Creat path for cache file when loading the package.
+- v1.0.1: Bug fix. Create path for cache file when loading the package.
 
 ## Usage
 Press `Ctrl+Shift+P` to call the panel, input `show texdoc` and choose 
@@ -34,8 +34,8 @@ installed in the local machine (acquired by `tlmgr list` command).
 * `Show TeXdoc with user input`: This will allow you to input a package name, 
 which is equivalent to the shell command `texdoc`.
 * `Show TeXdoc: refresh the list of installed packages`: Searching for all 
-packages installed is costy, so it is actually stored in `Packages\ShowTexdoc\
-paclist.pcl` as pickle binary. And this command will refresh the chache.
+packages installed is costly, so it is actually stored in `Packages\ShowTexdoc\
+paclist.pcl` as pickle binary. And this command will refresh the cache.
 
 You need to run `Show TeXdoc: refresh the list of installed packages` at least 
-once to get the chache!
+once to get the cache!
