@@ -1,0 +1,4 @@
+Bug fix:
+	Remove the refresh list command and instead use my pkl file, 
+for installed plugin does not have authority to write cache. It 
+will be back when I find out how to get the authority.
