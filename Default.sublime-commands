@@ -10,9 +10,5 @@
     {
         "caption": "Show TeXdoc with user input",
         "command": "input_show_texdoc"
-    },
-    {
-        "caption": "Show TeXdoc: refresh the list of installed packages",
-        "command": "refresh_texdoc"
     }
 ]
