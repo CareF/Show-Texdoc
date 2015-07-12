@@ -40,6 +40,3 @@ refresh the cache.
 
 You need to run `Show TeXdoc: refresh the list of installed packages` at least 
 once to get the cache!
-
-## Acknowledgment
-Thanks Carl-Henrik Buschmann who give feedback about Version 1.0.1
