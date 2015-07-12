@@ -10,14 +10,15 @@ from .tex_package_recognizer import GetPackagenameInline
 from .tex_package_list_gen  import GetPackageList
 from .thread_progress import ThreadProgress
 
-# The location of chached package list
+# The location of cached package list
 # I have to use absolote path here
 # or sometimes loading will fail
 pacpath = os.path.join(sublime.packages_path(), "ShowTexdoc")
-if not os.path.exists(pacpath):
-    os.makedirs(pacpath)
-cachedir = os.path.join(sublime.packages_path(), "ShowTexdoc", 'paclist.pcl')
-
+cachedir = os.path.join(pacpath, 'paclist.pcl')
+def plugin_loaded():
+    if not os.path.exists(pacpath):
+        os.makedirs(pacpath)
+        
 class PromptShowTexdocCommand(sublime_plugin.WindowCommand):
     '''Recognize the packages used in the documents'''
     def run(self):
@@ -63,7 +64,7 @@ class ShowAllTexdocCommand(sublime_plugin.WindowCommand):
                 with open(cachedir, 'rb') as pacs:
                     self.package_list = pickle.load(pacs)
             except Exception as e:
-                sublime.status_message("Load chache failed: "+e.strerror+" "+cachedir)
+                sublime.status_message("Load cache failed: "+e.strerror+" "+cachedir)
                 return
             if self.window.active_view():
                 self.window.show_quick_panel(self.package_list, self.on_done)
