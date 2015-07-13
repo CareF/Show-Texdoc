@@ -15,7 +15,7 @@ from .thread_progress import ThreadProgress
 # or sometimes loading will fail
 def plugin_loaded():
     global pacpath, cachedir
-    pacpath = os.path.join(sublime.packages_path(), "Show Texdoc")
+    pacpath = os.path.join(sublime.packages_path(), "ShowTexdoc")
     cachedir = os.path.join(pacpath, 'paclist.pcl')
     if not os.path.exists(pacpath):
         os.makedirs(pacpath)
