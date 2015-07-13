@@ -23,6 +23,9 @@ by this package.
 
 - v1.0.1: Bug fix. Create path for cache file when loading the package.
 
+- v1.0.3: Bug fix. Get the path at the suitable time so that cache can be
+written properly.
+
 ## Usage
 Press `Ctrl+Shift+P` to call the panel, input `show texdoc` and choose 
 from the 4 items. 
