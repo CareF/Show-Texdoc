@@ -10,7 +10,10 @@ pacpattern = re.compile(r'^i ([^:]*): (.*)$', re.MULTILINE)
 def GetPackageList(savedir):
     '''Save a list of installed packages 
     in format ['package name', 'discription']'''
-    pacs_raw = popen('tlmgr list --only-installed').read().splitlines()
+    pacs_raw = popen('tlmgr list --only-installed').read()
+    with open(savedir+".log", 'w') as log:
+        log.write(pacs_raw)
+    pacs_raw = pacs_raw.splitlines()
     pacs =  [list(pacpattern.search(line).groups()) for line in pacs_raw]
     with open(savedir,'wb') as output:
         pickle.dump(pacs, output, pickle.HIGHEST_PROTOCOL)

@@ -26,6 +26,9 @@ by this package.
 - v1.0.3: Bug fix. Get the path at the suitable time so that cache can be
 written properly.
 
+- v1.0.4: Write log file about getting package list, helping future develop
+that supports other LaTeX distribution.
+
 ## Usage
 Press `Ctrl+Shift+P` to call the panel, input `show texdoc` and choose 
 from the 4 items. 
@@ -45,4 +48,5 @@ You need to run `Show TeXdoc: refresh the list of installed packages` at least
 once to get the cache!
 
 ## Acknowledgment
-Thanks Carl-Henrik Buschmann who give feedback about Version 1.0.1
+Thanks Carl-Henrik Buschmann who give feedback about Version 1.0.1, 1.0.2 and 
+about distribution of MacTex
