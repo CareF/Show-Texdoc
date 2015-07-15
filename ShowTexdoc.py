@@ -4,7 +4,7 @@
 # Author:   Lyu Ming <CareF.Lm@gmail.com>
 
 import sublime, sublime_plugin
-import os, pickle, threading
+import os, pickle, threading, subprocess
 
 from .tex_package_recognizer import GetPackagenameInline
 from .tex_package_list_gen  import GetPackageList
@@ -108,4 +108,4 @@ class RefreshTexdocCommand(sublime_plugin.WindowCommand):
 class ShowTexdocCommand(sublime_plugin.TextCommand):
     '''Call for the package docs'''
     def run(self, edit, packagename = 'texlive'):
-        os.system('texdoc '+packagename)
+        subprocess.Popen('texdoc '+packagename)

@@ -21,11 +21,6 @@ by this package.
 ## Version
 - v1.0.0: The first release that realize basic function of showing docs.
 
-- v1.0.1: Bug fix. Create path for cache file when loading the package.
-
-- v1.0.3: Bug fix. Get the path at the suitable time so that cache can be
-written properly.
-
 - v1.0.4: Write log file about getting package list, helping future develop
 that supports other LaTeX distribution.
 
@@ -48,5 +43,5 @@ You need to run `Show TeXdoc: refresh the list of installed packages` at least
 once to get the cache!
 
 ## Acknowledgment
-Thanks Carl-Henrik Buschmann who give feedback about Version 1.0.1, 1.0.2 and 
-about distribution of MacTex
+Thanks Carl-Henrik Buschmann who gave feedback and helped me on testing the 
+package
