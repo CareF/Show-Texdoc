@@ -6,9 +6,17 @@
 import sublime, sublime_plugin
 import os, pickle, threading, subprocess
 
-from .tex_package_recognizer import GetPackagenameInline
-from .tex_package_list_gen  import GetPackageList
-from .thread_progress import ThreadProgress
+if sublime.version() < '3000':
+    # we are on ST2 and Python 2.X
+    # _ST3 = False
+    from tex_package_recognizer import GetPackagenameInline
+    from tex_package_list_gen  import GetPackageList
+    from thread_progress import ThreadProgress
+else:
+    # _ST3 = True
+    from .tex_package_recognizer import GetPackagenameInline
+    from .tex_package_list_gen  import GetPackageList
+    from .thread_progress import ThreadProgress
 
 # The location of cached package list
 # I have to use absolote path here
