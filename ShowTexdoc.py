@@ -108,4 +108,4 @@ class RefreshTexdocCommand(sublime_plugin.WindowCommand):
 class ShowTexdocCommand(sublime_plugin.TextCommand):
     '''Call for the package docs'''
     def run(self, edit, packagename = 'texlive'):
-        subprocess.Popen('texdoc '+packagename)
+        os.popen('texdoc '+packagename)
