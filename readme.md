@@ -24,6 +24,12 @@ by this package.
 - v1.0.4: Write log file about getting package list, helping future develop
 that supports other LaTeX distribution.
 
+- v2.0.0: New format of cache for better performance. Therefore you have to 
+refresh the cache to make it run in a right way. Discription of packages added
+in "mentioned in this document" command. Also, several bugs in multi-platform 
+have been fixed. Unfortunately I was still told that there is some problem in 
+support under Mac OS.
+
 ## Usage
 Press `Ctrl+Shift+P` to call the panel, input `show texdoc` and choose 
 from the 4 items. 

@@ -1,0 +1,4 @@
+ShowTexdoc Attention (Version 2.0.0): 
+	** The cache format have been changed for better performance, **
+	** Please be sure to refresh the cache if you have installed the old version **
+	P.S. I have remove the space in name of this package.

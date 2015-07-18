@@ -14,11 +14,12 @@ def GetPackageList(savedir):
     with open(savedir+".log", 'w') as log:
         log.write(pacs_raw)
     pacs_raw = pacs_raw.splitlines()
-    pacs = []
+    pacs = {}
     for line in pacs_raw:
         pacs_info = pacpattern.search(line)
         if pacs_info:
-            pacs +=  [list(pacs_info.groups())]
+            pac_name, pac_dscb = pacs_info.groups()
+            pacs[pac_name] = pac_dscb
     with open(savedir,'wb') as output:
         pickle.dump(pacs, output, pickle.HIGHEST_PROTOCOL)
 

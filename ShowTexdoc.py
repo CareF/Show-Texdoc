@@ -32,12 +32,21 @@ class PromptShowTexdocCommand(sublime_plugin.WindowCommand):
     '''Recognize the packages used in the documents'''
     def run(self):
         if self.window.active_view():
+            try:
+                with open(cachedir, 'rb') as pacs:
+                    package_dict = pickle.load(pacs)
+            except Exception as e:
+                sublime.status_message("Load cache failed: "+e.strerror+" "+cachedir)
+                return
             view = self.window.active_view()
             texts = view.substr(sublime.Region(0, view.size()))
-            self.package_list = GetPackagenameInline(texts)
-            if not self.package_list:
+            package_list = GetPackagenameInline(texts)
+            if not package_list:
                 sublime.status_message("No package found.")
                 return
+            self.package_list = [[pname, \
+            package_dict[pname] if pname in package_dict 
+            else "Discription not find"] for pname in package_list]
             self.window.show_quick_panel(self.package_list, self.on_done)
         pass
 
@@ -71,7 +80,8 @@ class ShowAllTexdocCommand(sublime_plugin.WindowCommand):
         try:
             try:
                 with open(cachedir, 'rb') as pacs:
-                    self.package_list = pickle.load(pacs)
+                    package_dict = pickle.load(pacs)
+                    self.package_list = [[pname, package_dict[pname]] for pname in package_dict]
             except Exception as e:
                 sublime.status_message("Load cache failed: "+e.strerror+" "+cachedir)
                 return
@@ -92,6 +102,7 @@ class ShowAllTexdocCommand(sublime_plugin.WindowCommand):
 
 freshlock = False
 def refreshing():
+    global freshlock
     try:
         freshlock = True
         GetPackageList(cachedir)
@@ -102,6 +113,7 @@ def refreshing():
 class RefreshTexdocCommand(sublime_plugin.WindowCommand):
     '''Refresh the cached list of installed packages'''
     def run(self):
+        global freshlock
         try:
             #Get packages list is quite slow, so we need to make a multithread task
             if freshlock:
