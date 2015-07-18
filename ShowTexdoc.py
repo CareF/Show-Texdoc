@@ -56,7 +56,7 @@ class PromptShowTexdocCommand(sublime_plugin.WindowCommand):
                 sublime.status_message("Package document search canceled.")
                 return
             self.window.active_view().run_command("show_texdoc", \
-                    {"packagename": self.package_list[pacindex]} )
+                    {"packagename": self.package_list[pacindex][0]} )
         except ValueError:
             pass
 
