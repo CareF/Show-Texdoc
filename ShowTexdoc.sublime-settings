@@ -1,0 +1,26 @@
+// ShowTexdoc Preferences
+
+{
+
+// ------------------------------------------------------------------
+// Platform settings: adapt as needed for your machine
+// ------------------------------------------------------------------
+
+    "osx":  {
+        // Path used when invoking tex & friends; MUST include $PATH
+        "texpath" : "$PATH:/usr/texbin:/usr/local/bin:/opt/local/bin"
+    },
+
+
+    "windows": {
+        // Path used when invoking tex & friends; "" is fine for MiKTeX
+        // For TeXlive 2011 (or other years) use
+        // "texpath" : "C:\\texlive\\2011\\bin\\win32;$PATH",
+        "texpath" : "$PATH",
+    },
+
+    "linux" : {
+        // Path used when invoking tex & friends; MUST include $PATH
+        "texpath" : "$PATH:/usr/texbin",
+    },
+}

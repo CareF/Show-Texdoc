@@ -128,4 +128,7 @@ class RefreshTexdocCommand(sublime_plugin.WindowCommand):
 class ShowTexdocCommand(sublime_plugin.TextCommand):
     '''Call for the package docs'''
     def run(self, edit, packagename = 'texlive'):
+        s = sublime.load_settings("ShowTexdoc.sublime-settings")
+        platform_settings  = s.get(sublime.platform())
+        self.path = platform_settings['texpath']
         os.popen('texdoc -w '+packagename)
