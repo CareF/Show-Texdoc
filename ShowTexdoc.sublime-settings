@@ -21,6 +21,6 @@
 
     "linux" : {
         // Path used when invoking tex & friends; MUST include $PATH
-        "texpath" : "$PATH:/usr/texbin",
+        "texpath" : "$PATH:/usr/local/texlive/2015/bin",
     },
 }

@@ -4,16 +4,16 @@
 # Author:   Lyu Ming <CareF.Lm@gmail.com>
 
 import sublime, sublime_plugin
-import os, pickle, threading, subprocess
+import os, sys, pickle, threading, subprocess
 
 if sublime.version() < '3000':
     # we are on ST2 and Python 2.X
-    # _ST3 = False
+    _ST3 = False
     from tex_package_recognizer import GetPackagenameInline
     from tex_package_list_gen  import GetPackageList
     from thread_progress import ThreadProgress
 else:
-    # _ST3 = True
+    _ST3 = True
     from .tex_package_recognizer import GetPackagenameInline
     from .tex_package_list_gen  import GetPackageList
     from .thread_progress import ThreadProgress
@@ -131,4 +131,8 @@ class ShowTexdocCommand(sublime_plugin.TextCommand):
         s = sublime.load_settings("ShowTexdoc.sublime-settings")
         platform_settings  = s.get(sublime.platform())
         self.path = platform_settings['texpath']
+        if not _ST3:
+            os.environ["PATH"] = os.path.expandvars(self.path).encode(sys.getfilesystemencoding())
+        else:
+            os.environ["PATH"] = os.path.expandvars(self.path)
         os.popen('texdoc -w '+packagename)
