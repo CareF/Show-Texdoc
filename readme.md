@@ -25,10 +25,12 @@ by this package.
 that supports other LaTeX distribution.
 
 - v2.0.0: New format of cache for better performance. Therefore you have to 
-refresh the cache to make it run in a right way. Discription of packages added
+refresh the cache to make it run in a right way. Description of packages added
 in "mentioned in this document" command. Also, several bugs in multi-platform 
 have been fixed. Unfortunately I was still told that there is some problem in 
 support under Mac OS.
+
+- v2.1.0: Solve the multi platform path environment setting problem.
 
 ## Usage
 Press `Ctrl+Shift+P` to call the panel, input `show texdoc` and choose 
