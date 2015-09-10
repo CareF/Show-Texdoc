@@ -1,0 +1,8 @@
+ShowTexdoc Attention (Version 2.1.0): 
+	New multi platform adapt, solving problem the plugin not working 
+	with path not included in global path setting.
+
+	Thanks to Carl-Henrik Buschmann to have helped testing it.
+
+	* For Carl-Henrik, if you see this, you may want to remove the 
+	.py file I sent you so that it will not block the new update. 
