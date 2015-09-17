@@ -34,9 +34,10 @@ support under Mac OS.
 
 ## Usage
 Before you use this package, you need to do the following things first: 
-1. Configure the LaTeX path in `Preferences` - `Package Setting` - `Show Texdoc`
-- `Settings - User`. You may want to copy it from `Settings - Default` to get 
-example setting and modify it accordingly.
+
+1. Configure the LaTeX path in `Preferences` - `Package Setting` - 
+`Show Texdoc` - `Settings - User`. You may want to copy it from `Settings - Default`
+to get example setting and modify it accordingly.
 2. Refresh the installed packages list cache: press `Ctrl+Shift+P` to call the
 panel, run the command `Show TeXdoc: refresh the list of installed packages` and
 wait until task bar tells you succeeded.
