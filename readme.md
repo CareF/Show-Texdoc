@@ -33,6 +33,14 @@ support under Mac OS.
 - v2.1.0: Solve the multi platform path environment setting problem.
 
 ## Usage
+Before you use this package, you need to do the following things first: 
+1. Configure the LaTeX path in `Preferences` - `Package Setting` - `Show Texdoc`
+- `Settings - User`. You may want to copy it from `Settings - Default` to get 
+example setting and modify it accordingly.
+2. Refresh the installed packages list cache: press `Ctrl+Shift+P` to call the
+panel, run the command `Show TeXdoc: refresh the list of installed packages` and
+wait until task bar tells you succeeded.
+
 Press `Ctrl+Shift+P` to call the panel, input `show texdoc` and choose 
 from the 4 items. 
 
@@ -47,8 +55,8 @@ packages installed is costly, so the list of packages is actually stored in
 `Packages\ShowTexdoc\paclist.pcl` as pickle binary. And this command will 
 refresh the cache.
 
-You need to run `Show TeXdoc: refresh the list of installed packages` at least 
-once to get the cache!
+*You need to run `Show TeXdoc: refresh the list of installed packages` at least 
+once to get the cache!*
 
 ## Acknowledgment
 Thanks Carl-Henrik Buschmann who gave feedback and helped me on testing the 
